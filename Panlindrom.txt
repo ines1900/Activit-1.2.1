@@ -1,0 +1,39 @@
+﻿Alghorithme
+
+var T:tab [1..n]
+    i,n: entiers
+Début
+afficher("entrer un mot")
+saisir M
+n= long(M)
+Pour i de 1 à n/2 faire
+   si T[i]=T[n] alors
+      repeter
+        i=i+1 
+        n=n-1
+      jusqu'à i=n
+   affiche ("ce mot est Palindrome")
+   si non
+       affiche (ce mot n'est pas Palindrome)
+   fin si
+Fin Pour
+-------------------------------------------------------------
+ Fonction test(T :tableau[1..n] :caractères) :boleen;
+   var i,n: entiers;
+         M:caractère;
+         r:boleen
+Début
+n= long(M);
+Pour i de 1 à n/2 faire
+   si T[i]=T[n] alors
+      repeter
+        i=i+1;
+        n=n-1;
+      jusqu'à i=n
+      r=vrai
+   si non 
+      r=faux
+   fin si
+   retourner(r)
+Fin Pour
+fin fonction

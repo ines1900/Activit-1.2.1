@@ -1,0 +1,28 @@
+﻿fonction echange(ref T :tableau[min_indice..max_indice] d'éléments;                 
+             val indice1,indice2 : entier) :vide;
+  var e :élément;
+  début
+    e = T[indice1];
+    T[indice1] = T[indice2];
+    T[indice2] = e;
+  fin
+finfonction
+
+fonction triBulle(ref T :tableau[1..12] de caractère) :vide;
+  T= {"Alban", "Jim", "Bob", "Albatroz", "Jinto", "Bow", "Hijo", "Manu", "Seb", "Teilo", "Charles", "Xavier"}
+  var i,j,k :entier;
+  début
+    pour i allant de 1 à 11 faire
+      pour j allant de 12 à i+1 par pas de -1 faire
+         repeter 
+           si T[k][j] > T[k][j-1] alors
+             echange(T, j, j-1);
+           sinon si T[k][j]=T[k][j-1] alors
+               K<-k+1
+           finsi
+         jusqu'à T[k][i]<t[k][i+1]
+      finpour
+    finpour
+    retourne (T)
+  fin
+finfonction

@@ -1,0 +1,15 @@
+﻿ T :tableau[1..8] d'entiers :vide;
+ T={45, 54, 23, 32, 64, 46, 28, 82} 
+var i,j :entier;
+  début
+    pour i de 1 à 7
+      x=i
+        pour j de i+1 à 8 faire
+          par pas de 1 faire
+           si (T[j]>T[x]) Alors;
+              permute(T[j],T[x]);
+           finsi
+        finpour
+    finpour
+    retourner(T)
+  fin
