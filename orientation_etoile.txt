@@ -1,0 +1,42 @@
+﻿fonction tri_insertion(ref T :tableau[1..N] d'entiers,):vide;
+T={Sirius, Rigel, Bételgeuse, Arcturus, Aldébaran, Véga, Deneb, et Altaïr}  
+var i,x,j:entier;
+Début
+        pour i de 1 à taille(T) - 1
+            x ← T[i]                            
+            j ← i                               
+            tant que j > 0 et T[j- 1] > x
+                     T[j] ← T[j-1]
+                     j ← j - 1
+                     T[j] ← x 
+            fin tanque
+        fin pour
+Fin
+Fin fonction
+
+fonction insertion dans tabtrié (ref T :tableau[1..N] de cartères,):vide;
+T={"Aldébaran", "Altaïr","Arcturus","Bételgeuse","Deneb",, "Rigel", "Sirius", "Véga"}  
+var n:entier;
+e: élément
+n <- taille
+tant que n > 0 et T[n-1] > e faire
+  T[n] <- T[n-1]
+  n <- n-1
+  T[n] <- e
+  taille <- taille + 1
+fin tanque
+finfonction
+
+
+fonction rechdicho(ref T :tableau[min..max] de cartères,):element;
+T={"Aldébaran", "Altaïr","Arcturus","Bételgeuse","Deneb",, "Rigel", "Sirius", "Véga"}  
+var min,max,mid:entier;
+e: élément
+si min = max alors
+ si T[min] = e alors retourner min
+sinon retourner NonTrouvé
+mid <- (min + max) / 2
+si tab[mid] < e alors
+retourner RechDicho(T, mid+1, max, e)
+sinon
+retourner RechDichoRec(tab, min, mid, e)
